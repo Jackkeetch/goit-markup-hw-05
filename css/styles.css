@@ -559,14 +559,7 @@ input {
   color: #ffffff;
   transition: background-color var(--transition);
 }
-footer-subs-btn-text {
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.04em;
-  text-align: center;
-  color: #ffffff;
-}
+
 .footer-subs-btn-icon {
   fill: #fff;
 }
