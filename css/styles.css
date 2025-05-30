@@ -537,13 +537,14 @@ input {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 16px;
+  color: #ffffff;
 }
 .footer-subs-input::placeholder {
   font-weight: 400;
   font-size: 12px;
   line-height: 2;
   letter-spacing: 0.04em;
-  color: #fff;
+  color: #ffffff;
 }
 
 .footer-subs-btn {
@@ -651,14 +652,20 @@ input {
   flex-direction: column;
   gap: 8px;
 }
-.modal--form-inputs {
+.modal-form-inputs {
   display: flex;
   flex-direction: column;
+  margin-bottom: 8px;
+}
+.modal-form-inputs.textarea {
+  margin-bottom: 16px;
 }
 .modal-form-label {
+  display: block;
+  margin-bottom: 4px;
   font-weight: 400;
   font-size: 12px;
-  line-height: 1.16667;
+  line-height: 1.17;
   letter-spacing: 0.04em;
   color: #8e8f99;
 }
@@ -671,11 +678,13 @@ input {
   fill: var(--secondary-accent-color);
 }
 .modal-input {
-  width: 360px;
+  width: 100%;
   height: 40px;
   border: 1px solid #2e2f4266;
   border-radius: 4px;
+  background-color: transparent;
   padding-left: 38px;
+  outline: transparent;
   transition: border-color var(--transition);
 }
 .modal-input-icon {
@@ -683,7 +692,7 @@ input {
   top: 50%;
   left: 16px;
   transform: translateY(-50%);
-  transition: fill 250ms var(--transition);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-input:hover,
@@ -694,8 +703,11 @@ input {
 .modal-input.textarea {
   height: 120px;
   resize: none;
-  padding-top: 8px;
-  padding-left: 16px;
+  padding: 8px 16px;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: rgba(46, 47, 66, 0.4);
 }
 .terms-link {
   color: var(--secondary-accent-color);
@@ -721,19 +733,18 @@ input {
   height: 16px;
   border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 2px;
-  transition: background-color 250ms var(--transition), border 250ms var(--transition), fill 250ms var(--transition);
   display: inline-flex;
   align-items: center;
   justify-content: center;
   fill: transparent;
-
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   margin-right: 8px;
 }
 
 input[type="checkbox"]:checked + .checkbox-label .checkbox-frame {
-  background-color: var(--secondary-accent-color);
+  background-color: #404bbf;
   border: none;
-  fill: #fff;
+  fill: #f4f4fd;
 }
 
 .modal-send-btn {
